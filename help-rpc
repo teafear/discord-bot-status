@@ -1,0 +1,23 @@
+# Статус Играет
+@client.event
+async def on_ready():
+    await client.change_presence(status=discord.Status.Online, activity=discord.game('a video game'))
+print('Мы вошли в систему как {0.user}'.format(client))
+
+# Статус Смотрит
+@client.event
+async def on_ready():
+    await client.change_presence(activity=discord. Activity(type=discord.ActivityType.watching, name='Видео'))
+print('Мы вошли в систему как {0.user}'.format(client))
+
+# Статус Слушает
+@client.event
+async def on_ready():
+    await client.change_presence(activity=discord. Activity(type=discord.ActivityType.listening, name='Музыку'))
+print('Мы вошли в систему как {0.user}'.format(client))
+
+# Статус Стримит
+@client.event
+async def on_ready():
+    await client.change_presence(activity=discord.Streaming(name='Контент', url='https://www.twitch.tv/5eafear'))
+print('Мы вошли в систему как {0.user}'.format(client))
